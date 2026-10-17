@@ -1,0 +1,20 @@
+# Downloaded / generated at install time
+sfx-library/kit/
+sfx-library/extra/
+sfx-library/_deleted/
+sfx-library/index.html
+tools/opus-sound-layer/
+
+# Remotion projects and media (never commit footage or renders)
+first-reel/
+*/node_modules/
+node_modules/
+out/
+*.MOV
+*.mov
+*.mp4
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db

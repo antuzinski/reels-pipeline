@@ -1,0 +1,22 @@
+{
+ "type": "click",
+ "file": "C:\\Reels\\sfx-library\\kit\\click\\kenney-interface-toggle-002.wav",
+ "verdict": "ok",
+ "build_db": -19.0,
+ "start_db": -0.0,
+ "end_db": -29.8,
+ "spikiness": 1.24,
+ "dur_s": 0.098,
+ "peak_offset_s": 0.0097,
+ "rise_ms": 4.7,
+ "centroid_hz": 2807,
+ "below150": 0.0,
+ "above6k": 0.051,
+ "flatness": 0.006,
+ "note": 96.1,
+ "start_floor_db": -5.3,
+ "source": {
+  "pack": "interface",
+  "file": "Audio/toggle_002.ogg"
+ }
+}

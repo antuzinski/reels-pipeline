@@ -1,0 +1,30 @@
+{
+ "type": "click",
+ "file": "C:\\Reels\\sfx-library\\kit\\click\\fs-534104-mouse-click-double-00-flac.wav",
+ "verdict": "ok",
+ "build_db": -29.3,
+ "start_db": -0.0,
+ "end_db": -38.6,
+ "spikiness": 3.64,
+ "dur_s": 0.105,
+ "peak_offset_s": 0.007,
+ "rise_ms": 1.0,
+ "centroid_hz": 3953,
+ "below150": 0.0,
+ "above6k": 0.292,
+ "flatness": 0.198,
+ "note": 82.6,
+ "start_floor_db": -45.5,
+ "source": {
+  "id": "534104",
+  "type": "click",
+  "title": "mouse-click-double-00.flac",
+  "creator": "pbimal",
+  "license": "cc0",
+  "url": "https://cdn.freesound.org/previews/534/534104_11830391-hq.mp3",
+  "landing": "https://freesound.org/people/pbimal/sounds/534104",
+  "tags": [
+   "classic"
+  ]
+ }
+}

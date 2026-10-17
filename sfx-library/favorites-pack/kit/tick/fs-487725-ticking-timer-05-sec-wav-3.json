@@ -1,0 +1,36 @@
+{
+ "type": "tick",
+ "file": "C:\\Reels\\sfx-library\\kit\\tick\\fs-487725-ticking-timer-05-sec-wav-3.wav",
+ "verdict": "ok",
+ "build_db": -10.7,
+ "start_db": -0.7,
+ "end_db": -29.6,
+ "spikiness": 3.24,
+ "dur_s": 0.03,
+ "peak_offset_s": 0.0072,
+ "rise_ms": 1.5,
+ "centroid_hz": 4361,
+ "below150": 0.0,
+ "above6k": 0.299,
+ "flatness": 0.262,
+ "note": null,
+ "start_floor_db": -24.6,
+ "source": {
+  "id": "487725",
+  "type": "tick",
+  "title": "Ticking Timer 05 Sec.wav",
+  "creator": "MATRIXXX_",
+  "license": "cc0",
+  "url": "https://cdn.freesound.org/previews/487/487725_6142149-hq.mp3",
+  "landing": "https://freesound.org/people/MATRIXXX_/sounds/487725",
+  "k": 3,
+  "keep": [
+   0,
+   1,
+   2
+  ],
+  "tags": [
+   "tick"
+  ]
+ }
+}

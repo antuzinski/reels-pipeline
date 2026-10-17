@@ -1,0 +1,36 @@
+{
+ "type": "tick",
+ "file": "C:\\Reels\\sfx-library\\kit\\tick\\fs-54848-ticking-clock-wav-1.wav",
+ "verdict": "ok",
+ "build_db": -21.5,
+ "start_db": -8.8,
+ "end_db": -28.0,
+ "spikiness": 1.93,
+ "dur_s": 0.15,
+ "peak_offset_s": 0.0243,
+ "rise_ms": 16.0,
+ "centroid_hz": 1811,
+ "below150": 0.0,
+ "above6k": 0.0,
+ "flatness": 0.004,
+ "note": 97.6,
+ "start_floor_db": -23.4,
+ "source": {
+  "id": "54848",
+  "type": "tick",
+  "title": "Ticking Clock.wav",
+  "creator": "Izkhanilov",
+  "license": "cc0",
+  "url": "https://cdn.freesound.org/previews/54/54848_673516-hq.mp3",
+  "landing": "https://freesound.org/people/Izkhanilov/sounds/54848",
+  "k": 3,
+  "keep": [
+   0,
+   1,
+   2
+  ],
+  "tags": [
+   "tick"
+  ]
+ }
+}

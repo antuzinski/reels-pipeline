@@ -1,0 +1,35 @@
+{
+ "type": "key",
+ "file": "C:\\Reels\\sfx-library\\kit\\key\\fs-348238-mech-keyboard-02-wav-1.wav",
+ "verdict": "ok",
+ "build_db": -22.2,
+ "start_db": -0.0,
+ "end_db": -46.0,
+ "spikiness": 2.68,
+ "dur_s": 0.15,
+ "peak_offset_s": 0.0116,
+ "rise_ms": 5.2,
+ "centroid_hz": 2435,
+ "below150": 0.002,
+ "above6k": 0.14,
+ "flatness": 0.228,
+ "note": null,
+ "start_floor_db": -34.2,
+ "source": {
+  "id": "348238",
+  "type": "key",
+  "title": "MECH-KEYBOARD-02.wav",
+  "creator": "newagesoup",
+  "license": "cc0",
+  "url": "https://cdn.freesound.org/previews/348/348238_4067257-hq.mp3",
+  "landing": "https://freesound.org/people/newagesoup/sounds/348238",
+  "k": 3,
+  "keep": [
+   0
+  ],
+  "tags": [
+   "typewriter",
+   "key"
+  ]
+ }
+}
