@@ -25,7 +25,14 @@ type ReelCaptionsProps = InteractiveTransformProps &
     readonly fontSize?: number;
     // Page texts (trimmed) shown bigger with a yellow marker highlight
     readonly emphasize?: string[];
+    // Key words shown in yellow inside a normal page (case-insensitive, punctuation ignored, prefix match: "франкенштейн" also hits "Франкенштейна")
+    readonly highlightWords?: string[];
+    // Karaoke: the word being spoken right now turns yellow
+    readonly karaoke?: boolean;
   };
+
+const HIGHLIGHT = "#ffd60a";
+const bare = (t: string) => t.toLowerCase().replace(/[^\p{L}\p{N}-]/gu, "");
 
 const reelCaptionsSchema = {
   ...Interactive.captionsSchema,
@@ -46,6 +53,11 @@ const reelCaptionsSchema = {
     description: "Font size",
     hiddenFromList: false,
   },
+  karaoke: {
+    type: "boolean",
+    default: false,
+    description: "Highlight the word being spoken",
+  },
 } as const satisfies InteractivitySchema;
 
 const ReelCaptionsContent: React.FC<ReelCaptionsProps> = ({
@@ -54,7 +66,10 @@ const ReelCaptionsContent: React.FC<ReelCaptionsProps> = ({
   width = 900,
   fontSize = 76,
   emphasize = [],
+  highlightWords = [],
+  karaoke = false,
 }) => {
+  const keys = useMemo(() => highlightWords.map(bare).filter(Boolean), [highlightWords]);
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const pages = useMemo(
@@ -131,7 +146,21 @@ const ReelCaptionsContent: React.FC<ReelCaptionsProps> = ({
               "0 2px 6px rgba(0, 0, 0, 0.55), 0 0 18px rgba(0, 0, 0, 0.35)",
           }}
         >
-          {page.text.trim()}
+          {keys.length || karaoke
+            ? page.tokens.map((token, i) => {
+                const word = bare(token.text);
+                const isKey = word.length > 0 && keys.some((k) => word.startsWith(k));
+                const isNow = karaoke && currentTimeMs >= token.fromMs && currentTimeMs < token.toMs;
+                const text = i === 0 ? token.text.trimStart() : token.text;
+                return isKey || isNow ? (
+                  <span key={i} style={{ color: HIGHLIGHT }}>
+                    {text}
+                  </span>
+                ) : (
+                  <span key={i}>{text}</span>
+                );
+              })
+            : page.text.trim()}
         </div>
       ) : null}
     </div>
