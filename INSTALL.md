@@ -56,9 +56,10 @@ cd first-reel
 npm i
 npx remotion add @remotion/media @remotion/captions @remotion/transitions @remotion/google-fonts @remotion/effects
 npx remotion add @remotion/whisper-webgpu @huggingface/transformers mediabunny @mediabunny/server
+npx remotion add @remotion/video-matting   # background removal (Studio → Remove background)
 mkdir -p src/graphics scripts captions public/sfx public/graphics ../footage
 ```
-Copy from `skill/reels-pipeline/`: `components/ReelCaptions.tsx` and `components/TalkingHead.tsx` → `src/`, `components/graphics/*` → `src/graphics/`, `scripts/*` → `scripts/`. Add to `remotion.config.ts`: `Config.setChromiumOpenGlRenderer("angle");`.
+Copy from `skill/reels-pipeline/`: `components/ReelCaptions.tsx`, `components/TalkingHead.tsx` and `components/BgVariants.tsx` → `src/`, `components/graphics/*` → `src/graphics/`, `scripts/*` → `scripts/`. Add to `remotion.config.ts`: `Config.setChromiumOpenGlRenderer("angle");`.
 Run `npx tsc --noEmit` — it should pass (components that reference example images compile even if the images are absent).
 
 Raw phone footage goes in `REELS_HOME/footage/`, never in `first-reel/public/` (Remotion copies `public/` to a temp folder on every render). Only working proxies go in `public/`.
