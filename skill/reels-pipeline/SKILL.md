@@ -18,7 +18,7 @@ Read before starting:
 
 ## Workflow
 
-Work in small approved steps (Pasha Molyanov / Нейроцех method): agree on a fragment, show **stills** of each scene (`npx remotion render <Comp> <dir> --frames=a,b,c --scale=0.5`), only then animate and render the whole reel.
+Work in small approved steps: agree on a fragment, show **stills** of each scene (`npx remotion render <Comp> <dir> --frames=a,b,c --scale=0.5`), only then animate and render the whole reel.
 
 1. **Project.** Use the existing Remotion project if there is one; otherwise `npx create-video@latest --yes --blank --no-tailwind <name>` inside REELS_HOME, then `npx remotion add @remotion/media @remotion/captions @remotion/transitions @remotion/google-fonts`. Raw footage goes in `REELS_HOME/footage/` — **not** in `public/`: Remotion copies the whole `public/` folder into a temp bundle on every render, so multi-GB MOVs there fill the disk (ENOSPC) and slow renders. Only the working proxies go in `public/`. Studio launcher in REELS_HOME: `Открыть студию.bat` (Windows) / `Открыть студию.command` (macOS).
 2. **Probe footage**: `ffprobe -show_entries stream=codec_name,width,height,r_frame_rate:stream_side_data=rotation`. iPhone MOVs are usually H.264 4K 30 fps (newer ones HEVC — re-encode the proxy to H.264); some are rotated.
